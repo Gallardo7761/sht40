@@ -12,7 +12,6 @@
 #include <stdint.h>
 #include "FreeRTOS.h"
 
-#include "stm32f4xx_hal_i2c.h"
 #include "task.h"
 
 #define SHT40_CRC8_POLYNOMIAL 0x31

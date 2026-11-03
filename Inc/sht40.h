@@ -11,7 +11,13 @@
 
 #include <stdint.h>
 #include <stdbool.h>
+#if defined(STM32F103xB)
+#include "stm32f1xx_hal.h"
+#elif defined(STM32F411xE)
 #include "stm32f4xx_hal.h"
+#else
+#error "SHT40: unsupported MCU"
+#endif
 
 #define SHT40_ADDRESS (0x44 << 1)
 
